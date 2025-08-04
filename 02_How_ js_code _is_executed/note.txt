@@ -1,0 +1,29 @@
+
+/* When we run this code a global execution context is created it has two component  mem
+ory and code  */
+
+
+/**jab v js code ko run karte hai tab ko ek brand new global execution context created hota hai aur usme do phase hota hai phela  hai memory component  isme variable and function ko store kiya jata hai aur isme variable undfined hote hai aur function m  uska function k andar jitna v code hai isme hota hai and dusara code component jisme js ka code ko line by line executed hota hai suru se dcode chlta hai aur jab var aata hai tab ko uska value code m hote hue memory m variable ko undefine se repolace ho jata hai second phase me code execution phane m jo undfined tha wo replace ho k value diya jata hai usme
+ * 
+ * /
+ 
+
+/* 
+var n = 2 ;
+function square(num) {
+    var ans = num * num ;
+    return ans;
+    
+}
+var square2 =  square(n);
+var square4 = square(4);
+
+jab v js code run hote hai tab ko ek global execution contxt ban jata hai aur usme 2 phase hote hai phela phase m memory allocation hote hai jo ki variable and function hai  so isme n m undefined hoga  square{...} m iska function ka pura code hoga  square2 isme undefined hoga and square4 m v undefinwd hoga code ko line by line run karte hai aur vaiable aur function ko memory allocation m dal dete hai aur variable mai undefined diya jata hai aur function m function ka pura code rahata hai dusara phase hai code execution yaha code ko calculate karte hai line by line jab v variable ka value milta hai tab ye memory allocation ko bhej dete hai aur usme undefined se replace ho jata hai iske bad ye line of code chalta hai var square2 =  square(n); jo ki ek naya execution context ban jata yaha function m chal jata hai aur yaha v variable and function dhunda jata hai same memory execution m executed hone k liye yahi sif variable hai to ye num and var he hoge  dono m undefined hoga  so next second phase me code execution hota hai dheka jayega num m 4 pass ho raha hai to ye num m jo undefined tha to usme 4 replace ho jayega aur dusara ans m code execution m  num multiply ho raha hai to ye 4 * 4 kar k ans m save ho jayega to 
+ ans m save ho hata hai undefine se replace ho k same num ki taraha jab ye pura function execution complete ho hata hai tab ko ye apna aap delete ho jata hai aur ye ans save ho jayega square2 m  back to ye line of code chalata hai ab  var square4 = square(4);
+iskew chalne se same execution context ban jata hai aur phela phase m variable num and ans hai jo ki undefined hai aur dusara phase m code line by line executed hoga same num pass ho raha ha to yaha 4 ho raha hai to ye num ka undefine se replace hoga aur ans same calculate ho k ans m v undefined replace ho k 16 ho jayega aur code khataqm hote he ye sab automatically delete ho jayega aur iska value square4 m 16 hoga undefined se replace ho k  iske bad global executiopn context v apne aap delete ho jayega 
+ 
+
+itna complex chiz ko manage karne k liye call stack use hota hai 
+*/
+
+/**ye code k liye  jo ki surat m global execution context hota hai aur iske bad  execution  hota hai iske bad ye delete ho jata hai aur execution2 start ho hai iska kam pura hone k bad ye v delete ho jata hai aur bacha hota hai global execution context jo ki ye v kam pura hone k bad automatically delete ho jata hai */

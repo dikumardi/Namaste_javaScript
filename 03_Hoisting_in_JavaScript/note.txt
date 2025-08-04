@@ -1,0 +1,2 @@
+
+Hoisting is a concept in JavaScript that allows us to access variables and functions before they are actually declared in the code, without getting an error. This happens because of the first phase of Execution Context creation, called the Memory Creation Phase.

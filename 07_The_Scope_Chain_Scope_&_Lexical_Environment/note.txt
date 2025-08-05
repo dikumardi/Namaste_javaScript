@@ -1,0 +1,26 @@
+/*
+Scope ka relation **lexical environment** se hota hai.
+
+Jab bhi ek **execution context** banta hai, uske saath ek **lexical environment** bhi automatically create hota hai.
+
+Lexical environment = 
+🔹 Local memory (variables, functions)
++
+🔹 Lexical reference to its parent (jahan ye function physically likha gaya hai)
+
+Jab bhi JavaScript kisi variable ko access karti hai, to:
+
+1. Pehle us function ke **local environment** me dekhti hai
+2. Wahan nahi mila to uske **parent lexical environment** me dekhti hai
+3. Aise hi ye chain Global Environment tak jati hai
+4. Agar kahin bhi nahi mila, to **ReferenceError (not defined)** throw hota hai
+
+Is pure process ko hi **Scope Chain** kaha jata hai — jisme JS ek variable ko parent se parent tak dhoondti hai.
+
+*/
+
+
+/* 
+
+scope relate karta hai lexical environment se so jab v execution context banta hai lexical environment v apne aap ban jata hai local variable environment m  lexical environment banta hai local variable environment + lexical reference of the parent jab v apne scope koi variaqble nahi milta hai toh wo apne parent k local environment variable m dhundata hai usme v agar nahi milta hai to wo last m Global execution hota hai uise check karta hai agar usme local variable m present hai to uskop print karta hai agar nahi hai to null ho jata hai ye jo lexical reference  parent m hai wo apne parent m dhunda ta hai usi ko scope chain bolte hai
+*/

@@ -1,0 +1,29 @@
+/* 
+An empty JavaScript file is called the **shortest JS program** because even if it's empty, JavaScript still creates a **Global Execution Context (GEC)**.
+
+This GEC is linked to the **`window` object** (in the browser).  
+All global scope variables and functions declared using `var` or function declaration are attached to this `window` object.
+
+These global variables and functions can be accessed only **within the global scope**.  
+We can access them like this:
+    window.variableName  
+    window.functionName
+
+But variables declared **inside functions** are local. We **cannot access them from outside**.
+
+Also, in the global scope, the **`this` keyword** refers to the **`window` object**, so:
+    this === window  ✅ (true in browser)
+
+Both `this` and `window` are created by the JavaScript engine.
+
+In **Node.js**, the global object is **not `window`**, it is called **`global`**.
+
+Note:
+- Only `var` is attached to the `window` object.
+- `let` and `const` are **not** attached to `window`.
+
+*/
+
+
+/* empty js  file ko he shortest js program kaha jata hai q ki ye  empty ho k v ye GEC ban jata hai aur ye ek  window object m attach ho jata hai  hai iske andar global scope variable and function attach ho jata hai aur iske sif global scope me he use kar sakte hai iske bhar use nmahi kar sakte hai hum hum isse aess karne k liye windows.variable nmae aur function de sakte hai likin functiuon k andar variable ko aces nahi kar sakte hai ye this keyword v binta hai this keyword and wi down object dono same hote hai ye dono ko js engine bante hai  niodejs m kuch aur nama hai   ye sif var ko he apne win dow m, aatch karta hai likin let and const ko nahi karta hai  */
+

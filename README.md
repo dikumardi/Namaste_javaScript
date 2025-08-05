@@ -1,1 +1,1 @@
-"# Namaste_javaScript" 
+"# JavaScript" 

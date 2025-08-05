@@ -1,0 +1,22 @@
+undefined is happen e variable is declared but no value is assigned given a value to the variable so when GEC is create in the first pphase a memory allocation is done  and at that time vartiable is assigned undefined to it it is like a placeholder where we can put value to it when it is initilize 
+
+not defined means variable is never declared and if if search for it it will find error as reference error
+loosely type or weakly typed means we can change  the datatype anytime and no error can be found
+eg var a ;
+a =10 ;
+a ='hello'
+
+
+/** What is undefined?
+undefined means the variable has been declared but no value is assigned yet.
+
+It happens during the first phase of the Global Execution Context (GEC), also known as the Memory Creation Phase.
+
+In this phase, JavaScript allocates memory for all variables and assigns them the value undefined.
+
+You can think of undefined as a placeholder — the variable exists, but no value has been given yet. **/
+
+What is Loosely Typed / Weakly Typed Language?
+JavaScript is called a loosely typed or weakly typed language.
+
+This means you can change the type of a variable at any time, and JavaScript won’t give an error.

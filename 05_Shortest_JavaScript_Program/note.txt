@@ -25,5 +25,26 @@ Note:
 */
 
 
+
+/*An empty JS file is still a valid program because JavaScript automatically creates a Global Execution Context (GEC).
+
+In browsers, the global object is called the window object.
+
+In the global scope, this === window.
+
+Only var declarations and functions are added to the window object.
+
+let and const are global, but not added to the window object.
+
+Variables declared inside a function (var, let, or const) are local and cannot be accessed outside the function.
+
+In Node.js, the global object is called global, not window.
+
+ */
+
+
+
+
+
 /* empty js  file ko he shortest js program kaha jata hai q ki ye  empty ho k v ye GEC ban jata hai aur ye ek  window object m attach ho jata hai  hai iske andar global scope variable and function attach ho jata hai aur iske sif global scope me he use kar sakte hai iske bhar use nmahi kar sakte hai hum hum isse aess karne k liye windows.variable nmae aur function de sakte hai likin functiuon k andar variable ko aces nahi kar sakte hai ye this keyword v binta hai this keyword and wi down object dono same hote hai ye dono ko js engine bante hai  niodejs m kuch aur nama hai   ye sif var ko he apne win dow m, aatch karta hai likin let and const ko nahi karta hai  */
 

@@ -1,0 +1,88 @@
+How function function   works
+whenever we run js code it automatically create a GEC Global execution context let us see how function works by the given example
+var x = 1 ;
+a();
+b();
+console.log(x);
+
+function a() {
+    var x = 10 ;
+    console.log(x);
+}
+
+function b() {
+    var x = 100 ;
+    console.log(x);
+}
+  after creation of GEC it will store variable and function  to the memory component  here x : will be undefined and a{...} b{...} function will be store same exact code of the function then code will executed line by line so here var x = 1 will be run then it will go to the  local environment variable and replace with the undefined after that it will go to the a() it will now create a execution context and it will store variable and function in the memory component so here only x variable is avaliable and no function is there so  so next code will executed and check each line of code one by one so here var x = 10 it will go to the local variable and replace undefined with 10 and next is console.log(x) so it will search on local variable if x is avaliable or not so it will print 10 after that execution context will be delete and back to GEC now it will check the b() same goes for b() it created execution context and check any variable and function exist or not so here only variable is avaliable so it will be undefined next phase will be code so it will check line by line so first line will be replace undefined with the actual value that is 100 and save it to the local vriable and then console will be print so itr will check if it is aviable in the local variable or not so it will print 100 and next it will delete after completed and back to GEC it will console.log(x) it will check to the local nvironemnt so here it is aviable 1 so it will print 1 
+  so the actual answer will be 
+  10
+  100
+  1
+
+                          /**     How does a function work?    **/
+
+
+Whenever we run JavaScript code, it automatically creates a GEC (Global Execution Context). Let’s understand how a function works with the given example:
+
+js
+Copy
+Edit
+var x = 1;
+a();
+b();
+console.log(x);
+
+function a() {
+    var x = 10;
+    console.log(x);
+}
+
+function b() {
+    var x = 100;
+    console.log(x);
+}
+🔄 Step-by-Step Execution:
+After the creation of the Global Execution Context (GEC), it stores variables and functions in the memory component.
+
+Here, x will be stored as undefined.
+
+Functions a and b will be stored with their entire function definitions.
+
+Then the code starts executing line by line (code phase):
+
+👉 Step 1: var x = 1;
+In the global memory, x was initially undefined, now it will be updated to 1.
+
+👉 Step 2: a();
+Function a() is called.
+
+A new execution context is created for a().
+
+Inside a(), only one variable is present — x.
+
+It is first assigned as undefined (in memory phase).
+
+Then, var x = 10; replaces undefined with 10.
+
+Next line: console.log(x); will check the local environment, finds x = 10, and prints 10.
+
+After execution, the execution context of a() is deleted, and control goes back to GEC.
+
+👉 Step 3: b();
+Similar to a(), a new execution context is created for b().
+
+Inside b(), only one variable is x.
+
+First, x = undefined (memory phase).
+
+Then x = 100 in the code phase.
+
+console.log(x); checks in the local environment, finds x = 100, and prints 100.
+
+After execution, the context of b() is removed, and control returns to GEC.
+
+👉 Step 4: console.log(x);
+Now we are back in the Global Execution Context.
+
+It checks the global variable x, which is 1, and prints 1.

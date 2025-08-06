@@ -1,0 +1,32 @@
+
+                /**let and const **/
+                  /**Reference error , Syntax error and type error **/
+                /** Temporal Dead Zone  **/
+
+let and const  both are hoisted but they are different from var they go in a temporal dead zone jab tak variable ko value nahi de deta tab tak
+
+
+In let we cannot do like create same variable name again and again it gives us syntax error but in case of var we can do it it cannot give error
+
+for const we have to give value to  it at time of creating a variable if not it will give syntax error  but agar hum const ko naya value dete hai with same name to wo type error hota hai
+
+Temporal Dead zone is tab hota hai jab ki let and const hoisted hota hai us bich ka samai jab tak variable initialization nahi hota hai
+
+
+
+                /** let and const **/
+let and const are hoisted but not initialized like var.
+They are in a Temporal Dead Zone (TDZ) until they are initialized.
+Accessing them before declaration causes a ReferenceError.
+
+let and const cannot be redeclared in the same scope → SyntaxError.
+const must be initialized when declared → TypeError if not.
+
+/** Temporal Dead Zone **/
+TDZ is the time between hoisting and initialization of let/const.
+Variables in TDZ cannot be accessed and throw ReferenceError.
+
+/** Errors **/
+ReferenceError → Access before declaration or undeclared variable.
+SyntaxError → Invalid syntax (e.g., redeclaration of let/const).
+TypeError → Wrong type or behavior (e.g., uninitialized const).

@@ -1,0 +1,9 @@
+/** Block**/ 
+/**Block scope**/
+block ko curl braces {} ko kahate hai isse compound staetement v kahate hai qki ye sab code koi ek he jaga rakta hai means sab ko ek jaga wrap kar k rakhta hai  ye sif var let const ko braces kandar he use kar sakte hai iske bahar nahi use kar sakte hai sif var he use ho sakta hai qki ye window m attach hota hao matlab ki ye global scope hai 
+
+/**Shadowing in js**/
+ block k bhara  agar koi variable hai to wo block k andar same variable name use hote he wo modifie ho jata hai value matlab ki wo point karta hai block ka local memory space
+
+/**Illegal Shadowing**/
+hum use let ko block bahar use nahi kar sakte hai block k andr var iske hum Illegal Shadowing bolte hai

@@ -1,0 +1,95 @@
+/** 
+ * Function Statement (Function Declaration)
+ * - A function created using the 'function' keyword with a name.
+ * - Fully hoisted: you can call it before its definition.
+ */
+function a() {
+    console.log("a is called");
+}
+a(); // ✅ works even if called before definition
+
+
+/** 
+ * Function Expression
+ * - A function assigned to a variable.
+ * - Can be anonymous or named.
+ * - Only the variable is hoisted (with value undefined), so calling before assignment gives TypeError.
+ */
+var b = function () {
+    console.log("b is called");
+};
+b();
+// Example of hoisting issue:
+// b(); // ❌ TypeError: b is not a function
+// var b = function () {};
+
+
+/**
+ * Function Declaration vs Function Statement
+ * - These two are the same thing.
+ */
+
+
+/** 
+ * Anonymous Function
+ * - A function without a name.
+ * - Cannot be used as a function statement (SyntaxError).
+ * - Can be used inside a function expression, callback, or argument.
+ */
+// function () {} // ❌ SyntaxError
+var anon = function () {  // ✅ anonymous function expression
+    console.log("anonymous function works");
+};
+
+
+/**
+ * Named Function Expression
+ * - A function expression with a name.
+ * - The name is only accessible inside the function’s scope.
+ */
+var c = function xyz() {
+    console.log(typeof xyz); // 'function'
+};
+c();
+// xyz(); // ❌ ReferenceError — name is not available outside
+
+
+/**
+ * Parameters vs Arguments
+ * - Parameters: placeholders in function definition.
+ * - Arguments: actual values passed when calling a function.
+ */
+function greet(name) { // 'name' = parameter
+    console.log("Hello " + name);
+}
+greet("Diku"); // "Diku" = argument
+
+
+/**
+ * First-Class Functions
+ * - Functions are treated like values (first-class citizens).
+ * - They can be stored in variables, passed as arguments, and returned from other functions.
+ */
+function run(fn) {
+    fn();
+}
+run(function () {
+    console.log("Hello from callback");
+});
+
+// Returning a function
+function outer() {
+    return function inner() {
+        console.log("Returned function executed");
+    };
+}
+outer()(); // Immediately call returned function
+
+
+/** 
+ * Arrow Functions
+ * - Shorter syntax for function expressions.
+ * - Do not have their own 'this', 'arguments', or 'super'.
+ */
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5

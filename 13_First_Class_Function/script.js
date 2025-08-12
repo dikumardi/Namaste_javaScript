@@ -2,10 +2,10 @@
     console.log("a is called");
     
 }
-a(); this below code is called function statement **/
+a(); this below code is called function statement .in hoisting it can be hoisted **/
 
 
-/**Function Expression: The below code is function express we can use the  function as a value it can be both anonymous function and named function  **/
+/**Function Expression: The below code is function express we can use the  function as a value it can be both anonymous function and named function.if hoisted can be done here it give error because we have assing value as a function   **/
 var b = function (){
     console.log("b is called");
     
@@ -61,7 +61,6 @@ var d = function name(fn) {
 }
 console.log(d());
 
-/**Arrow Function **/
 
 
 

@@ -1,0 +1,8 @@
+/**What is a callback function in javascript **/
+/**javascript is a Synchronous and single-threaded language**/
+/**Blocking the main thread**/
+/**Power of callback**/
+/**Deep about Event Listeners **/
+/**Closures Demo with Event Listeners  **/
+/** Scope Demo with Event Listeners**/
+/** Garbage collection & removeEventListeners**/

@@ -1,4 +1,6 @@
+/**Normal exmaple of setTimeout how it work **/
 console.log("Start");
+
 setTimeout(function cb() {
     console.log("Callback");
     

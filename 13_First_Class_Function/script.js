@@ -61,8 +61,3 @@ var d = function name(fn) {
 }
 console.log(d());
 
-
-
-
-
-
